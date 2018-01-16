@@ -5,8 +5,8 @@
  * (Look in the StarInstructions.txt file to see what each method
  *  should draw.)
  *
- * @author  [          ] <-- you
- * @version [          ] <-- today
+ * @author  BenJetson
+ * @version 16 JAN 2018
  */
 
 
@@ -32,7 +32,7 @@ class StarPatterns
 			{	
 			    if (i==0 || i==h-1 || j==0 || j==w-1) System.out.print("*");
 			    else System.out.print(" ");
-				//System.out.print(i + "" + j + " ");
+				// System.out.print(i + "" + j + " ");
 			}
 			System.out.println();
 		}	
@@ -48,7 +48,7 @@ class StarPatterns
 			{
 			    if (i==j || i+j==h-1) System.out.print("*");
 			    else System.out.print(" ");
-			    System.out.print(i + "" + j + " ");
+			    // System.out.print(i + "" + j + " ");
 			}
 			System.out.println();
 		}	
