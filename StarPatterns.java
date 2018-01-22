@@ -121,6 +121,22 @@ class StarPatterns
 		}
 	}
 
+	public static void starTriangleUR(int h) {
+		int w = h;
+		int counter = h;
+
+		for (int i=0; i<h; i++) {
+			for (int j=0; j<h; j++) {
+				if (h-j <= counter) System.out.print("*");
+				else System.out.print(" ");
+				// System.out.print(i + "" + j + " ");
+			}
+			counter--;
+			// System.out.printf("| c: %d", counter);
+			System.out.println();
+		}
+	}
+
 	// public static void starTHIS(int h) {
 	// 	int w = h;
 
@@ -156,8 +172,11 @@ class StarPatterns
 
 		starTriangle(5);
 		System.out.println();
-
+		
 		emptyTriangle(7);
+		System.out.println();
+
+		starTriangleUR(10);
 		System.out.println();
 			
 	}
