@@ -81,6 +81,24 @@ class StarPatterns
 		}
 	}
 
+	public static void twoStarBoxes(int w) {
+		int h = w;
+		int x = w * 2;
+		int y = x;
+		
+		for (int i=0; i<y; i++) {
+			for (int j=0; j<x; j++) {
+				if ( (i < y / 2 && j < x / 2) || (i >= y / 2 && j >= x / 2) ) {
+					System.out.print("*");
+				} else {
+					System.out.print(" ");
+				}
+				// System.out.print(i + "" + j + " ");
+			}
+			System.out.println();
+		}
+	}
+
 	// public static void starTHIS(int h) {
 	// 	int w = h;
 
@@ -109,6 +127,9 @@ class StarPatterns
 		System.out.println();
 
 		starXBox(8);
+		System.out.println();
+
+		twoStarBoxes(5);
 		System.out.println();
 			
 	}
