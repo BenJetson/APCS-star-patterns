@@ -110,6 +110,17 @@ class StarPatterns
 		}
 	}
 
+	public static void emptyTriangle(int h) {
+
+		for (int i=0; i<h; i++) {
+			for (int j=0; j<h; j++) {
+				if (j == 0 || j == i || i == h-1) System.out.print("*");
+				else System.out.print(" ");
+			}
+			System.out.println();
+		}
+	}
+
 	// public static void starTHIS(int h) {
 	// 	int w = h;
 
@@ -144,6 +155,9 @@ class StarPatterns
 		System.out.println();
 
 		starTriangle(5);
+		System.out.println();
+
+		emptyTriangle(7);
 		System.out.println();
 			
 	}
