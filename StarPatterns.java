@@ -99,6 +99,17 @@ class StarPatterns
 		}
 	}
 
+	public static void starTriangle(int h) {
+
+		for (int i=0; i<h; i++) {
+			for (int j=0; j<h; j++) {
+				if (j <= i) System.out.print("*");
+				else System.out.print(" ");
+			}
+			System.out.println();
+		}
+	}
+
 	// public static void starTHIS(int h) {
 	// 	int w = h;
 
@@ -130,6 +141,9 @@ class StarPatterns
 		System.out.println();
 
 		twoStarBoxes(5);
+		System.out.println();
+
+		starTriangle(5);
 		System.out.println();
 			
 	}
