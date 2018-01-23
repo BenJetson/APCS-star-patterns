@@ -152,6 +152,19 @@ class StarPatterns
 		}
 	}
 
+	public static void checkerBoard(int h) {
+		int w = h;
+
+		for (int i=0; i<h; i++) {
+			for (int j=0; j<w; j++) {
+				if ((i % 2 == 0 && j % 2 == 0) || (i % 2 != 0 && j % 2 != 0)) System.out.print("*");
+				else System.out.print(" ");
+				// System.out.print(i + "" + j + " ");
+			}
+			System.out.println();
+		}
+	}
+
 	// public static void starTHIS(int h) {
 	// 	int w = h;
 
@@ -195,6 +208,9 @@ class StarPatterns
 		System.out.println();
 
 		isocelesStarTriangle(5);
+		System.out.println();
+
+		checkerBoard(10);
 		System.out.println();
 		
 	}
