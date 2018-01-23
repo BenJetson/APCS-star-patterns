@@ -123,15 +123,15 @@ class StarPatterns
 
 	public static void starTriangleUR(int h) {
 		int w = h;
-		int counter = h;
+		// int counter = h;
 
 		for (int i=0; i<h; i++) {
+			int counter = h - i;
 			for (int j=0; j<h; j++) {
 				if (h-j <= counter) System.out.print("*");
 				else System.out.print(" ");
 				// System.out.print(i + "" + j + " ");
 			}
-			counter--;
 			// System.out.printf("| c: %d", counter);
 			System.out.println();
 		}
