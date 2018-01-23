@@ -165,19 +165,19 @@ class StarPatterns
 		}
 	}
 
-	// public static void biggerCheckerBoard(int c, int s) {
-	// 	int x = c * s;
-	// 	int y = c * s;
+	public static void biggerCheckerBoard(int c, int s) {
+		int x = c * s * 2;
+		int y = x;
 
-	// 	for (int i=0; i<y; i++) {
-	// 		for (int j=0; j<x; j++) {
-	// 			if (x / ) System.out.print("*");
-	// 			else System.out.print(" ");
-	// 			System.out.print(i + "" + j + " ");
-	// 		}
-	// 		System.out.println();
-	// 	}
-	// }
+		for (int i=0; i<y; i++) {
+			for (int j=0; j<x; j++) {
+				if ((j / s % 2 == 0 && i / s % 2 == 0) || j / s % 2 != 0 && i / s % 2 != 0) System.out.print("*");
+				else System.out.print(" ");
+				// System.out.printf("%02d%02d ", i, j);
+			}
+			System.out.println();
+		}
+	}
 	
 	// public static void starTHIS(int h) {
 	// 	int w = h;
@@ -225,6 +225,9 @@ class StarPatterns
 		System.out.println();
 
 		checkerBoard(10);
+		System.out.println();
+
+		biggerCheckerBoard(4, 5);
 		System.out.println();
 		
 	}
