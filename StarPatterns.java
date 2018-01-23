@@ -123,31 +123,31 @@ class StarPatterns
 
 	public static void starTriangleUR(int h) {
 		int w = h;
-		// int counter = h;
 
 		for (int i=0; i<h; i++) {
-			int counter = h - i;
+			int z = h - i;
 			for (int j=0; j<h; j++) {
-				if (h-j <= counter) System.out.print("*");
+				if (h-j <= z) System.out.print("*");
 				else System.out.print(" ");
 				// System.out.print(i + "" + j + " ");
 			}
-			// System.out.printf("| c: %d", counter);
+			// System.out.printf("| z: %d", z);
 			System.out.println();
 		}
 	}
-
+	
 	public static void isocelesStarTriangle(int h) {
 		int w = (h*2) - 1;
-
+		
 		for (int i=0; i<h; i++) {
-			int counter = ((i + 1) * 2) - 1;
-
+			int z = ((i + 1) * 2) - 1;
+			
 			for (int j=0; j<w; j++) {
-				if ((w / 2) - (counter / 2) <= j && (w / 2) + (counter / 2) >= j) System.out.print("*");
+				if ((w / 2) - (z / 2) <= j && (w / 2) + (z / 2) >= j) System.out.print("*");
 				else System.out.print(" ");
 				// System.out.print(i + "" + j + " ");
 			}
+			// System.out.printf("| z: %d", z);
 			System.out.println();
 		}
 	}
