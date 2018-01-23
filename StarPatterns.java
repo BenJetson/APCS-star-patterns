@@ -178,6 +178,25 @@ class StarPatterns
 			System.out.println();
 		}
 	}
+
+	public static void upsideDownCheckeredTriangle(int h) {
+		int w = (h*2) - 1;
+		
+		for (int i=h; i>0; i--) {
+			int z = ((i + 1) * 2) - (h / 2) + 1;
+			
+			for (int j=0; j<w; j++) {
+				if ((w / 2) - (z / 2) <= j
+					&& (w / 2) + (z / 2) >= j 
+					&& ((j % 2 == 0 && i % 2 == 0) 
+					|| (j % 2 != 0 && i % 2 != 0))) System.out.print("*");
+				else System.out.print(" ");
+				// System.out.print(i + "" + j + " ");
+			}
+			// System.out.printf("| z: %d", z);
+			System.out.println();
+		}
+	}
 	
 	// public static void starTHIS(int h) {
 	// 	int w = h;
@@ -223,11 +242,14 @@ class StarPatterns
 
 		isocelesStarTriangle(5);
 		System.out.println();
-
+		
 		checkerBoard(10);
 		System.out.println();
-
+		
 		biggerCheckerBoard(4, 5);
+		System.out.println();
+
+		upsideDownCheckeredTriangle(10);
 		System.out.println();
 		
 	}
