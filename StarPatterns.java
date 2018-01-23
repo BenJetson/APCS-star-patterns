@@ -5,7 +5,7 @@
  * (Look in the StarInstructions.txt file to see what each method
  *  should draw.)
  *
- * @author  BenJetson
+ * @author  Ben Godfrey
  * @version 16 JAN 2018
  */
 
@@ -137,6 +137,21 @@ class StarPatterns
 		}
 	}
 
+	public static void isocelesStarTriangle(int h) {
+		int w = (h*2) - 1;
+		int counter = 1;
+
+		for (int i=0; i<h; i++) {
+			for (int j=0; j<w; j++) {
+				if ((w / 2) - (counter / 2) <= j && (w / 2) + (counter / 2) >= j) System.out.print("*");
+				else System.out.print(" ");
+				// System.out.print(i + "" + j + " ");
+			}
+			counter += 2;
+			System.out.println();
+		}
+	}
+
 	// public static void starTHIS(int h) {
 	// 	int w = h;
 
@@ -178,7 +193,10 @@ class StarPatterns
 
 		starTriangleUR(10);
 		System.out.println();
-			
+
+		isocelesStarTriangle(5);
+		System.out.println();
+		
 	}
      
 }
