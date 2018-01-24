@@ -125,13 +125,11 @@ class StarPatterns
 		int w = h;
 
 		for (int i=0; i<h; i++) {
-			int z = h - i;
 			for (int j=0; j<h; j++) {
-				if (h-j <= z) System.out.print("*");
+				if (h-j <= h - i) System.out.print("*");
 				else System.out.print(" ");
 				// System.out.print(i + "" + j + " ");
 			}
-			// System.out.printf("| z: %d", z);
 			System.out.println();
 		}
 	}
