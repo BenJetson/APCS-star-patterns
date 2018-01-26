@@ -237,18 +237,20 @@ class StarPatterns
 		}
 	}
 
-	// public static void starTHIS(int h) {
-	// 	int w = h;
+	public static void starFlag() {
+		int w = 45;
+		int h = 13;
 
-	// 	for (int i=0; i<h; i++) {
-	// 		for (int j=0; j<w; j++) {
-	// 			if () System.out.print("*");
-	// 			else System.out.print(" ");
-	//			System.out.print(i + "" + j + " ");
-	// 		}
-	// 		System.out.println();
-	// 	}
-	// }
+		for (int i=0; i<h; i++) {
+			for (int j=0; j<w; j++) {
+				if (j < 17 && i < 7) System.out.print("*");
+				else if (i % 2 == 0 || i == 0) System.out.print("R");
+				else System.out.print(" ");
+				// System.out.print(i + "" + j + " ");
+			}
+			System.out.println();
+		}
+	}
 
 	public static boolean isPrime(int n)
     {
@@ -334,6 +336,9 @@ class StarPatterns
 		fibonacciStars(8);
 		System.out.println();
 		// System.out.println(nthFib(Integer.parseInt(args[0])));
+
+		starFlag();
+		System.out.println();
 	}
      
 }
