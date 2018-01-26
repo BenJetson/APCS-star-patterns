@@ -219,6 +219,24 @@ class StarPatterns
 		}
 	}
 
+	public static void fibonacciStars(int h) {
+		
+		int[] fibs = new int[h];
+		for (int i=0; i<h; i++) {
+			fibs[i] = nthFib(i+1);
+		}
+		int w = fibs[h-1];
+
+		for (int i=0; i<h; i++) {
+			for (int j=0; j<w; j++) {
+				if (j < fibs[i]) System.out.print("*");
+				else System.out.print(" ");
+				// System.out.print(i + "" + j + " ");
+			}
+			System.out.println();
+		}
+	}
+
 	// public static void starTHIS(int h) {
 	// 	int w = h;
 
@@ -246,7 +264,28 @@ class StarPatterns
         }
         
         return true;
-    }
+	}
+	
+	public static int nthFib(int n) {
+		int[] fibs = new int[] {0, 1};
+
+		if (n < 1) {
+			return -1;
+		} else if (n < 3) {
+			return 1;
+		} else {
+			int counter = 2;
+			while (counter <= n) {
+				int prevFib = fibs[1];
+				int currentFib = fibs[0] + fibs[1];
+				fibs = new int[]{prevFib, currentFib};
+				counter++;
+			}
+			return fibs[1];
+		}
+
+
+	} 
 
 	public static void main(String[] args) 
 	{
@@ -292,6 +331,9 @@ class StarPatterns
 		primeStars(7);
 		System.out.println();
 		
+		fibonacciStars(8);
+		System.out.println();
+		// System.out.println(nthFib(Integer.parseInt(args[0])));
 	}
      
 }
