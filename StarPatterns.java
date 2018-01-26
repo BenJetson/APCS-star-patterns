@@ -196,6 +196,29 @@ class StarPatterns
 		}
 	}
 	
+	public static void primeStars(int h) {
+		
+		int[] primes = new int[50];
+        int primesFound = 0;
+        int currentTest = 1;
+        while(primesFound < h) {
+            if (isPrime(currentTest)) {
+                primes[primesFound++] = currentTest;
+            }
+            currentTest++;
+        }
+		int w = primes[h-1];
+
+		for (int i=0; i<h; i++) {
+			for (int j=0; j<w; j++) {
+				if (j < primes[i]) System.out.print("*");
+				else System.out.print(" ");
+				// System.out.print(i + "" + j + " ");
+			}
+			System.out.println();
+		}
+	}
+
 	// public static void starTHIS(int h) {
 	// 	int w = h;
 
@@ -208,6 +231,22 @@ class StarPatterns
 	// 		System.out.println();
 	// 	}
 	// }
+
+	public static boolean isPrime(int n)
+    {
+        if (n == 2)        return true;
+        else if (n < 2)    return false;
+        else if (n % 2==0) return false;
+        
+        double limit = Math.sqrt(n);
+        
+        for (int i=3; i<=limit; i+=2)
+        {
+            if (n % i == 0) return false;
+        }
+        
+        return true;
+    }
 
 	public static void main(String[] args) 
 	{
@@ -248,6 +287,9 @@ class StarPatterns
 		System.out.println();
 
 		upsideDownCheckeredTriangle(10);
+		System.out.println();
+		
+		primeStars(7);
 		System.out.println();
 		
 	}
